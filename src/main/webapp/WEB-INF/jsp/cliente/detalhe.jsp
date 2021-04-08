@@ -11,37 +11,38 @@
 
 </head>
 <body>
-			<div class="container">	
+	<div class="container">	
+		<h1>DETALHES</</h1>
+	</div>
+	<div class="painel-body">
+		<div class="btn-group">
+			<form action="/home">
+				<button type="submit" class="btn btn-link"> Home </button>
+			</form>
+		</div>
+	</div>
+		<form action="/cliente/incluir" method="post">
+			<div class="form-group">
+				<label>Informa seu nome:</label>
+				<input type="text" name="nome" required>
+			</div>
 			
-				<form action="/cliente/incluir" method="post">
-				
-					<div class="form-group">
-						<label>Informa seu nome:</label>
-						<input type="text" name="nome" required>
-					</div>
-					<div class="painel-body">
-						<div class="btn-group">
-							<form action="/">
-								<button type="submit" class="btn btn-link"> Home </button>
-							</form>
-						</div>
-					</div>
-				</form>
+		</form>
 			
-			<c:if test="${not empty usuarios}">	
-			<h2>Listagem de Clientes</h2>
-			<table class="table">
-			<thead>
-					<tr>
-			        <th>Nome</th>
-			        <th></th>
-				    </tr>
-			    </thead>
-			    <tbody>
-			      <c:forEach var="s" items="${lista}">
-			      <tr>
-			        <td>${s.nome}</td>
-			        <td><a href="/cliente/${s.id}/excluir">excluir</a></td>
+	<c:if test="${not empty usuarios}">	
+	<h2>Listagem de Clientes</h2>
+	<table class="table">
+	<thead>
+			<tr>
+			      <th>Nome</th>
+			      <th></th>
+				  </tr>
+			  </thead>
+			  <tbody>
+	<c:forEach var="s" items="${lista}">
+			    <tr>
+			      <td>${s.nome}</td>
+			      <td><a href="/cliente/${s.id}/excluir">excluir</a></td>
 			
 			      </tr>
 			      </c:forEach>

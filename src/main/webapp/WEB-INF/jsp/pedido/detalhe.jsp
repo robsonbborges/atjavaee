@@ -41,7 +41,7 @@
 					<button type="submit">Cadastrar</button>
 					<div class="painel-body">
 						<div class="btn-group">
-							<form action="/">
+							<form action="/home">
 								<button type="submit" class="btn btn-link"> Home </button>
 							</form>
 						</div>

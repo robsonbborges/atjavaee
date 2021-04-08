@@ -13,10 +13,22 @@ public class UsuarioService {
 	
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
+	
+	public Usuario autenticacao(String email, String senha) {
+		return usuarioRepository.autenticacao(email,senha);
+	}
 
 	public List<Usuario> obterLista() {
 		
 		return (List<Usuario>)usuarioRepository.findAll();
+	}
+	
+	public void incluir(Usuario usuario) {
+		usuarioRepository.save(usuario);
+	}
+	
+	public void excluir(Integer id) {
+		usuarioRepository.deleteById(id);
 	}
 
 }
