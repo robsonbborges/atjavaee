@@ -13,7 +13,7 @@
 <body>
 	<div>
 		<div class="container">	
-			<h1>SISTEMA PARA COMPRA DE ROUPAS </h1>
+			<h1>Cadastro</h1>
 		</div>
 		<div class="painel-body">
 			<div class="btn-group">
@@ -29,6 +29,10 @@
   		</div>
   		</c:if>
 			<form action="/usuario/login" method="post">
+				<div class="form-group">
+					<label>Informar o nome:</label>
+					<input type="email" name="email" class="form-control">
+				</div>
 				<div class="form-group">
 					<label>Informa o e-mail:</label>
 					<input type="email" name="email" class="form-control">
